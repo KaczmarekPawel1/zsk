@@ -1,26 +1,20 @@
 <?php
 echo ("<pre>");
-print_r ($_POST);
+  print_r ($_POST);
 echo ("</pre>");
-if (!empty ($_POST[]'name']) && !empty($_POST['geometricFigure'])){
-  echo 'ok';
-
-}else{
-  switch (variable) {
-    case 'kwadrat':
-      header("location ./square.php");
-      break;
-
-    case 'prostokat':
-
-      break;
-  } 'Wypełnij dane';
+if (!empty ($_POST['name']) && !empty($_POST['geometricFigure'])) {
+switch ($_POST['geometricFigure']) {
+  case 'kwadrat':
+    header('location: ./kwadrat.php');
+    break;
+    case 'prostokąt':
+    echo 'prostokąt';
+}
+}else {
+?>
+<script>
+  history.back();
+</script>
+<?php
 }
  ?>
-   <script>
-    history.back();
-   <script>
-   <?php
- }
-
-    ?>
